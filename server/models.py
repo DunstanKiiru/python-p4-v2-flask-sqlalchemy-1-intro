@@ -22,4 +22,5 @@ class User(db.Model):
     
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True,nullable=False, index=True)
-    email= db.Column(db.String(120))
+    email= db.Column(db.String(120), Unique=True)
+    verified = db.Column(db.Boolean, default=False)
